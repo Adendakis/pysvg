@@ -1,4 +1,6 @@
+import pysvg
 
+# waste .. delete or clean up
 
 def getExtremum(items, function, operator):
     i = 0

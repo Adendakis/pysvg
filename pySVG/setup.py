@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-#from distutils.core import setup
 from setuptools import setup
 
 setup(name="pysvg",
@@ -10,8 +9,8 @@ setup(name="pysvg",
       author_email="kmansour@web.de",
       url="http://codeboje.de/pysvg/",
       packages=['pysvg'],
-      package_dir={"pysvg":"src/pysvg"},
-      classifiers = [
+      package_dir={"pysvg": "src/pysvg"},
+      classifiers=[
           'Development Status :: 4 - Beta',
           'Intended Audience :: Developers',
           'License :: OSI Approved :: BSD License',
@@ -21,4 +20,4 @@ setup(name="pysvg",
           'Programming Language :: Python',
           'Topic :: Multimedia :: Graphics',
           ],
-     )
+      )

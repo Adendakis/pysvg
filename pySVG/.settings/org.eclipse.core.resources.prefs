@@ -1,6 +1,6 @@
-#Tue Jul 20 09:44:17 CEST 2010
 eclipse.preferences.version=1
 encoding//conf/conf.py=utf-8
+encoding//src/pysvg/__init__.py=utf-8
 encoding//src/pysvg/animate.py=iso-8859-1
 encoding//src/pysvg/attributes.py=iso-8859-1
 encoding//src/pysvg/builders.py=iso-8859-1

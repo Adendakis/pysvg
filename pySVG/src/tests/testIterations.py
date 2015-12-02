@@ -1,23 +1,20 @@
 #!/usr/bin/python
 # -*- coding: iso-8859-1 -*-
 
-from pysvg.structure import *
-from pysvg.shape import *
-from pysvg.builders import ShapeBuilder
+import pysvg
 
-import math
 
 def testIterationsWithUse():
-    s=Svg()
-    d = Defs()
-    sb =ShapeBuilder()
-    rectangle = sb.createRect(0,0,100,200,fill='000')
+    s = pysvg.Svg()
+    d = pysvg.Defs()
+    sb = pysvg.ShapeBuilder()
+    rectangle = sb.createRect(0, 0, 100, 200, fill='000')
     rectangle.set_id('baseRect')
     d.addElement(rectangle)
     s.addElement(d)
-    coords=[(1,1),(200,200)]
-    for (x,y) in coords:
-        r=Use()
+    coords = [(1, 1), (200, 200)]
+    for (x, y) in coords:
+        r = pysvg.Use()
         r.set_x(x)
         r.set_y(y)
         r.set_xlink_href('#baseRect')
@@ -27,20 +24,19 @@ def testIterationsWithUse():
 
 
 def testIterationsWithAttributesChange():
-    s=Svg()
-    
-    sb =ShapeBuilder()
-    coords=[(1,1),(200,200)]
-    for (x,y) in coords:
-        rectangle = sb.createRect(0,0,100,200,fill='000')
+    s = pysvg.Svg()
+
+    sb = pysvg.ShapeBuilder()
+    coords = [(1, 1), (200, 200)]
+    for (x, y) in coords:
+        rectangle = sb.createRect(0, 0, 100, 200, fill='000')
         rectangle.set_x(x)
         rectangle.set_y(y)
         s.addElement(rectangle)
 
     s.save('./testoutput/iterationsWithAttributesChange.svg')
 
-  
-if __name__ == '__main__': 
-  testIterationsWithUse()
-  testIterationsWithAttributesChange()
-  
+
+if __name__ == '__main__':
+    testIterationsWithUse()
+    testIterationsWithAttributesChange()
